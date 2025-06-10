@@ -33,4 +33,6 @@ Docker on Cloud
 
 Key Takeaways
 
-Link als QR Code
+hilfreich zum verstehen CI/CD: https://docs.gitlab.com/ci/
+
+github Link als QR Code
