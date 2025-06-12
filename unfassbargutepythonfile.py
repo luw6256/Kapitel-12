@@ -19,3 +19,15 @@ print("Die aktuelle Uhrzeit ist:", time.strftime("%H:%M", time.localtime(zeit)),
 print(f"Wow es sind {wartezeit} Sekunden vergangen")
 
     print(f"Hallo ich_bin {name}")
+
+
+"""
+
+import pdb  
+
+def fehlerhafte_funktion():
+    pdb.set_trace()  
+    return 1/0
+
+
+"""

@@ -1,10 +1,14 @@
 name: example black
-on: 
+on: [push]
+#push: branches: ["branchname"]
 jobs:
-        format:
+        test:
+                name: testname
                 runs-on: ubuntu-latest
                 steps:
                   - uses: actions/checkout@v4
                   - uses: actions/setup-python@v4
+                    with:
+                       python-version:'3.12'
                   - run: pip install black
                   - run: black . --check
