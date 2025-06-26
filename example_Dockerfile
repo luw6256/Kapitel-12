@@ -10,7 +10,7 @@ RUN pip install --no-cache-dir -r requirements.txt      #installiert die notwend
 COPY data/livedata.py .
 COPY data/sqldatadef.py .
 
-# Definiere den Port, der vom Container freigegeben wird. nur für Docker compose
+# Definiere den Port, der vom Container freigegeben wird. nur für Docker compose nötig
 EXPOSE 9110 
 
 CMD ["python", "livedata.py"]
