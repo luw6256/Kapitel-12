@@ -13,7 +13,7 @@ jobs:       #Steve bitte entfernen. hatte bislang keine Zeit dafür
 
         - uses: actions/setup-python@v4 #gibt Programmiersprache an
           with:
-            python-version:'3.12'      #gibt die benötigte Version an
+            python-version: '3.12'      #gibt die benötigte Version an
 
         - name:  install_requirements                      #Bennenung der Aktion         # ich kaufe einen Selbstlaut für 300
           run: python -m pip install -r requirements.txt  #installiere die Module aus der requirements file
