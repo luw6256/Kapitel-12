@@ -4,7 +4,7 @@ import random
 
 """Variablen Deklaration"""
 zeit = time.time()
-wartezeit = time.sleep("5")
+wartezeit = time.sleep(5)
 name = "ich"
 
 
