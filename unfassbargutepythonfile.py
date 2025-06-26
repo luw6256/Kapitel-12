@@ -1,17 +1,18 @@
-import time
-import random
+import time   #nicht in requirements.txt ist schon in python integriert
+import random #2.0.1
 import pandas
 
 
 """Variablen Deklaration"""
 zeit = time.time()
-wartezeit = time.sleep("5")
+wartezeit = 5
 name="ich"
+seed = random.seed()
 
 """
 # aktuelle Uhrzeit anzeigen
 print("Die aktuelle Uhrzeit ist:", time.strftime("%H:%M", time.localtime(zeit)), " Uhr")
-
+time.sleep(wartezeit)
 #angabe wie viel Zeit gewartet wurde bis dieser Print ausgeführt wird#
 print(f"Wow es sind {wartezeit} Sekunden vergangen")
 
@@ -19,16 +20,21 @@ print(f"Wow es sind {wartezeit} Sekunden vergangen")
 """
 
 def random_numbers():
-    seed = random.seed()
 
-    for i in range(10, seed.randint(10, 100)):
+    for i in range(10, random.randint(10, 100)):
         yield i
-"""
-def addnumbers():
+
+def number_prediction():
+    wins = 0
+    looses = 0
     for j in random_numbers():
-
-"""
-
+        prediction = random.randint(10,100)
+        if j == prediction:
+            print(f"hurra ich hatte Recht. Es war meine Lieblingszahl die {prediction}")
+            wins += 1
+        else:
+            looses += 1
+    print(f"Siege: {wins}, Verloren: {looses}")
 
 
 
@@ -109,7 +115,8 @@ def addnumbers():
 def errormessages():
     try:
         random_numbers()
-        print("Ooh Baby, i feel like, This print sounds better than an Error ")
+        number_prediction()
+        print(f"Ooh Baby {time.sleep(1)}\n i feel like {time.sleep(1)}\n This Message sounds better than an Error ")
     except Exception as inst:
         print("Ooops i did it again. i played with your Code, and have a problem again.")
         print(type(inst))
@@ -117,7 +124,6 @@ def errormessages():
         print(inst)
         print("Ooops i did it again. i played with your Code, and have a problem again.")
 
-random_numbers()
 errormessages()
 
 

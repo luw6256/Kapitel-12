@@ -6,7 +6,7 @@ name: example black
 Steve jobs:       #Steve bitte entfernen. hatte bislang keine Zeit dafür
         test:
               - name: testname
-                runs-on: ubuntu-latest       #gibt typ des benötigten Servers an
+                runs-on: ubuntu-latest       #gibt das Environment über was GitHub actions laufen soll an
                 steps:
                   - uses: actions/checkout@v4  #Klont den Code aus dem Repository
 

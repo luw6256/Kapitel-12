@@ -2,11 +2,12 @@ FROM python:3.12-slim
 
 WORKDIR /app
 
-COPY ../../requirements.txt .
-#COPY requirements.txt requirements.txt
-RUN pip install --no-cache-dir -r requirements.txt      #installiert die notwendigen Packages sofern sie via pip installierbar sind
+COPY ../../requirements.txt .                   #kopiert requirements.txt auf den Container. diese File liegt 2 Ordner außerhalb von der Dockerfile
+#installiert die notwendigen Packages sofern sie via pip installierbar sind
+RUN pip install --no-cache-dir -r requirements.txt
 
 #COPY ../../data/export.py .
+# kopiert die File livedata.py die im Ordner data ist auf den container. data wird angegeben da die Dockerfile außerhalb von data ist
 COPY data/livedata.py .
 COPY data/sqldatadef.py .
 
