@@ -5,7 +5,7 @@ on:
 
 jobs:       #Steve bitte entfernen. hatte bislang keine Zeit dafür
   test:
-    - name: testname
+      name: testname
       runs-on: ubuntu-latest       #gibt typ des benötigten Servers an
 
       steps:
