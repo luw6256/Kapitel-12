@@ -12,5 +12,5 @@ print("Die aktuelle Uhrzeit ist:", time.strftime("%H:%M", time.localtime(zeit)),
 """angabe wie viel Zeit gewartet wurde bis dieser Print ausgeführt wird"""
 print(f"Wow es sind {wartezeit} Sekunden vergangen")
 
-    print(f"Hallo ich_bin {name}")
+    print(f"Hallo ich bin {name}")
 
