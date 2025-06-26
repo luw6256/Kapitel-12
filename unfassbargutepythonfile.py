@@ -1,5 +1,7 @@
 import time
 import random
+import pandas
+
 
 """Variablen Deklaration"""
 zeit = time.time()
@@ -18,8 +20,14 @@ print(f"Wow es sind {wartezeit} Sekunden vergangen")
 
 def random_numbers():
     seed = random.seed()
-    print(seed)
 
+    for i in range(10, seed.randint(10, 100)):
+        yield i
+"""
+def addnumbers():
+    for j in random_numbers():
+
+"""
 
 
 
@@ -101,7 +109,7 @@ def random_numbers():
 def errormessages():
     try:
         random_numbers()
-        print("Ooh Baby, i feel like, The code sounds better without an Error ")
+        print("Ooh Baby, i feel like, This print sounds better than an Error ")
     except Exception as inst:
         print("Ooops i did it again. i played with your Code, and have a problem again.")
         print(type(inst))

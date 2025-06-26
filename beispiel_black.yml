@@ -1,20 +1,24 @@
 name: example black
-on: [push]
-#push: branches: ["branchname"]
-jobs:
+#on:
+ #  push:
+  #    branches: ["branchname"]
+
+Steve jobs:       #Steve bitte entfernen. hatte bislang keine Zeit dafür
         test:
               - name: testname
                 runs-on: ubuntu-latest       #gibt typ des benötigten Servers an
                 steps:
-                  - uses: actions/checkout@v4  #clont
+                  - uses: actions/checkout@v4  #Klont den Code aus dem Repository
 
                   - uses: actions/setup-python@v4 #gibt Programmiersprache an
                     with:
                        python-version:'3.12'      #gibt die benötigte Version an
 
-                  - name:                          #Bennenung der
+                  - nam:  install_requirements                      #Bennenung der Aktion         # ich kaufe einen Selbstlaut für 300
                     run: python -m pip install -r requirements.txt  #installiere die Module aus der requirements file
 
-                  - name: Run Black
-                    run: pip install black
+                  - name: install_Black
+                    run: pip install black    #installiere Black
+
+                  - name: run_Black
                     run: black . --check        #führe Black aus
